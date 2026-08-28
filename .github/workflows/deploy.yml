@@ -30,20 +30,14 @@ jobs:
       - name: Instalar dependências
         run: |
           npm ci
-          npm rebuild esbuild
+          npm install --no-save @rollup/rollup-linux-x64-gnu @esbuild/linux-x64
 
       - name: Verificar TypeScript
         run: npm run typecheck
         continue-on-error: true
 
       - name: Gerar aplicação estática
-        run: |
-          npx vite build > vite-build.log 2>&1 || {
-            cat vite-build.log
-            echo "::error title=Vite build falhou::$(tr '\n' ' ' < vite-build.log | cut -c1-1500)"
-            exit 1
-          }
-          cat vite-build.log
+        run: npx vite build
 
       - name: Desativar processamento Jekyll
         run: touch dist/.nojekyll
