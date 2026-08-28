@@ -30,6 +30,10 @@ jobs:
       - name: Instalar dependências
         run: npm ci
 
+      - name: Verificar TypeScript
+        run: npm run typecheck
+        continue-on-error: true
+
       - name: Gerar aplicação estática
         run: npm run build
 
