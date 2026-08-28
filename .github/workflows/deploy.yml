@@ -38,18 +38,12 @@ jobs:
 
       - name: Gerar aplicação estática
         run: |
-          set +e
-          node node_modules/vite/bin/vite.js build > vite-build.log 2>&1
-          status=$?
+          npx vite build > vite-build.log 2>&1 || {
+            cat vite-build.log
+            echo "::error title=Vite build falhou::$(tr '\n' ' ' < vite-build.log | cut -c1-1500)"
+            exit 1
+          }
           cat vite-build.log
-          if [ "$status" -ne 0 ]; then
-            python3 - <<'PY'
-          from pathlib import Path
-          text = Path("vite-build.log").read_text(errors="replace")[-2000:].replace("%", "%25").replace("\n", "%0A")
-          print(f"::error title=Vite build falhou::{text}")
-          PY
-            exit "$status"
-          fi
 
       - name: Desativar processamento Jekyll
         run: touch dist/.nojekyll
