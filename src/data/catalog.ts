@@ -278,6 +278,27 @@ export const catalog: CatalogItem[] = [
     destaque: false,
   },
   {
+    id: 'diretorio-consultoria-atuarial',
+    titulo: 'Diretório & Repositório — Consultoria Atuarial',
+    tipo: 'Repositório',
+    area: 'GEPIN',
+    descricao: 'Repositório de documentos produzidos pela Consultoria Atuarial no SharePoint.',
+    descricaoCompleta:
+      'Repositório centralizado de documentos produzidos pela Consultoria Atuarial, incluindo avaliação de planos, garantias financeiras, precificação de produtos, relatórios de avaliação financeira, risco assistencial, termos de responsabilidade atuarial, testes de adequação de passivo e testes de consistência (PEONA).',
+    indicadores: [],
+    tags: ['Consultoria Atuarial', 'SharePoint', 'documentos', 'repositório', 'atuarial', 'GEPIN'],
+    perguntas: [
+      'Onde estão os documentos produzidos pela Consultoria Atuarial?',
+      'Quais relatórios atuariais estão disponíveis no repositório?',
+      'Onde consultar testes de adequação de passivo ou consistência PEONA?',
+    ],
+    fonte: 'SharePoint — Consultoria Atuarial',
+    periodicidade: 'Eventual',
+    ultimaAtualizacao: '2026-08-31',
+    url: 'https://ipasgosaude-my.sharepoint.com/:f:/g/personal/rubens_sousa_ipasgosaude_com_br/IgCP4pYNJU4VR7IW8pVgcD57AfQemqvJIkC8QByNnJnrQI0?e=XwPPsL',
+    destaque: false,
+  },
+  {
     id: 'diagrama-banco-dados-gepin',
     titulo: 'Diagrama do Banco de dados GEPIN',
     tipo: 'Base de dados',
