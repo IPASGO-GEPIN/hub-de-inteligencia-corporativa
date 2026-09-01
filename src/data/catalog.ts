@@ -89,8 +89,8 @@ export const catalog: CatalogItem[] = [
     ],
     fonte: 'SEI — Sistema Eletrônico de Informações',
     periodicidade: 'Diário',
-    ultimaAtualizacao: '2026-08-28',
-    url: 'https://painel-de-processos-sei.vercel.app/',
+    ultimaAtualizacao: '2026-09-01',
+    url: 'https://painel-de-processos-sei.ipasgo.go.gov.br/',
     destaque: true,
   },
   {
@@ -275,6 +275,26 @@ export const catalog: CatalogItem[] = [
     periodicidade: 'Eventual',
     ultimaAtualizacao: '2026-08-28',
     url: 'https://ipasgosaude.sharepoint.com/sites/GEPAS/SitePages/CollabHome.aspx?e=1:6d73e03940bf419da1a167b0f868eb2f&CT=1787918938237&OR=OWA-NT-Mail&CID=491d8d13-7422-7ca9-ef5c-67980e4a79e0&SI=NonSentItems&SLSync=F',
+    destaque: false,
+  },
+  {
+    id: 'diretorio-direp-geben',
+    titulo: 'Diretório & Repositório — DIREP / GEBEN',
+    tipo: 'Repositório',
+    area: 'GEBEN',
+    descricao: 'Diretório e repositório de documentos da Gerência de Relacionamento com Beneficiário (GEBEN) no SharePoint.',
+    descricaoCompleta:
+      'Repositório centralizado de documentos, materiais e referências da GEBEN vinculada à DIREP, hospedado no SharePoint corporativo.',
+    indicadores: [],
+    tags: ['DIREP', 'GEBEN', 'SharePoint', 'documentos', 'repositório', 'relacionamento com beneficiário'],
+    perguntas: [
+      'Onde estão os documentos oficiais da GEBEN?',
+      'Quais materiais estão disponíveis no repositório GEBEN?',
+    ],
+    fonte: 'SharePoint — GEBEN',
+    periodicidade: 'Eventual',
+    ultimaAtualizacao: '2026-09-01',
+    url: 'https://ipasgosaude.sharepoint.com/sites/DiretoriadeRelacionamentoeProduto-DIREP/Documentos%20Compartilhados/Forms/AllItems.aspx?id=%2Fsites%2FDiretoriadeRelacionamentoeProduto%2DDIREP%2FDocumentos%20Compartilhados%2FDIREP%20%2D%20Diretoria%20de%20Relacionamento%20e%20Produto%2FDIREP%5FGEBEN&p=true&ct=1788291186798&or=Teams%2DHL&ga=1&LOF=1',
     destaque: false,
   },
   {
