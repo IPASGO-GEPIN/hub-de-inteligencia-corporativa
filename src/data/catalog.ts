@@ -257,7 +257,7 @@ export const catalog: CatalogItem[] = [
   },
   {
     id: 'painel-protocolos-crm-visao-geral',
-    titulo: 'Painel de Protocolos (CRM) - Visão Geral',
+    titulo: 'OMNI - Painel de Protocolos (CRM) - Visão Geral',
     tipo: 'Dashboard',
     area: 'GEBEN',
     descricao: 'Gerenciamento de atendimentos e protocolos registrados no CRM.',
@@ -295,7 +295,7 @@ export const catalog: CatalogItem[] = [
   },
   {
     id: 'painel-telefonia',
-    titulo: 'Painel de Telefonia',
+    titulo: 'OMNI - Painel de Telefonia',
     tipo: 'Dashboard',
     area: 'GEBEN',
     descricao: 'Gerenciamento histórico e monitoramento em tempo real das chamadas telefônicas.',
@@ -334,7 +334,7 @@ export const catalog: CatalogItem[] = [
   },
   {
     id: 'painel-relatorio-envios-whatsapp',
-    titulo: 'Painel de Relatório de Envios (Disparo WhatsApp)',
+    titulo: 'OMNI - Painel de Relatório de Envios (Disparo WhatsApp)',
     tipo: 'Dashboard',
     area: 'GEBEN',
     descricao: 'Gerenciamento de campanhas e disparos de mensagens via WhatsApp.',
@@ -371,7 +371,7 @@ export const catalog: CatalogItem[] = [
   },
   {
     id: 'hub-bi',
-    titulo: 'Hub BI',
+    titulo: 'OMNI - Hub BI',
     tipo: 'Plataforma',
     area: 'GEBEN',
     descricao: 'Central em desenvolvimento para criação, análise e gestão de dashboards de BI.',
