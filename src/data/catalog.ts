@@ -692,4 +692,43 @@ export const catalog: CatalogItem[] = [
     url: 'https://vitorstefaisk.github.io/Painel_Prospeccao_Operadoras/',
     destaque: false,
   },
+  {
+    id: 'painel-prospeccao-patrocinadores',
+    titulo: 'Painel de Prospecção de Patrocinadores',
+    tipo: 'Dashboard',
+    area: 'GEPAS',
+    descricao:
+      'Acompanhamento das tratativas com órgãos públicos, conselhos, sindicatos e associações elegíveis como patrocinadores do Ipasgo Saúde.',
+    descricaoCompleta:
+      'Painel de prospecção de novos patrocinadores (GEPAS / COPAR) para adesão de servidores, vinculados e dependentes na modalidade de autogestão com patrocinador. Reúne jornada de prospecção, cronograma das fases, taxa de conversão, temperatura da carteira, objeções e entraves, potencial de impacto dos estudos atuariais e registro analítico das tratativas por entidade, com base normativa RN ANS nº 137/2006.',
+    indicadores: [
+      'Entidades mapeadas',
+      'Contatos com resposta',
+      'Reuniões técnicas',
+      'Conversões em convênio',
+      'Temperatura da carteira',
+      'Vidas em estudo atuarial',
+    ],
+    tags: [
+      'prospecção',
+      'patrocinadores',
+      'convênio',
+      'autogestão',
+      'órgãos públicos',
+      'ANS',
+      'GEPAS',
+      'COPAR',
+    ],
+    perguntas: [
+      'Quais entidades estão em cada etapa da jornada de prospecção?',
+      'Como está a conversão da carteira mapeada até a celebração do convênio?',
+      'Quais tratativas estão quentes, mornas ou com objeção registrada?',
+      'Qual o potencial de vidas nos estudos atuariais em andamento?',
+    ],
+    fonte: 'Painel de Prospecção de Patrocinadores — GEPAS / COPAR',
+    periodicidade: 'Eventual',
+    ultimaAtualizacao: '2026-09-17',
+    url: 'https://vitorstefaisk.github.io/Painel_Prospeccao_Patrocinadores/',
+    destaque: false,
+  },
 ]
