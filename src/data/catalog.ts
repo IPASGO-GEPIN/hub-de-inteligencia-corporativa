@@ -653,4 +653,43 @@ export const catalog: CatalogItem[] = [
     url: 'https://ipasgo-gepin.github.io/diagrama_banco_de_dados_gepin/',
     destaque: false,
   },
+  {
+    id: 'painel-prospeccao-operadoras',
+    titulo: 'Painel de Prospecção de Operadoras',
+    tipo: 'Dashboard',
+    area: 'GEPAS',
+    descricao:
+      'Acompanhamento das tratativas de cessão e compartilhamento recíproco de rede assistencial com operadoras parceiras.',
+    descricaoCompleta:
+      'Painel de prospecção de operadoras parceiras no âmbito do piloto de Rede Assistencial Compartilhada (GEPAS / COPAR). Reúne jornada de prospecção, cronograma de etapas, funil de conversão, distribuição da carteira em Goiás e registro analítico das tratativas por operadora, com base normativa RN 137, RN 509 e RN 517.',
+    indicadores: [
+      'Carteira prospectada',
+      'Contato efetivo',
+      'Jornada de prospecção',
+      'Funil de conversão',
+      'Vidas em GO',
+      'Situação da tratativa',
+    ],
+    tags: [
+      'prospecção',
+      'operadoras',
+      'rede assistencial',
+      'compartilhamento de rede',
+      'convênio',
+      'ANS',
+      'GEPAS',
+      'COPAR',
+    ],
+    perguntas: [
+      'Quais operadoras estão em cada etapa da jornada de prospecção?',
+      'Como está o funil de conversão e as vidas correspondentes?',
+      'Quais tratativas estão em andamento, concluídas ou sem retorno?',
+      'Como se distribui a carteira prospectada em Goiás?',
+    ],
+    fonte: 'Painel de Prospecção de Operadoras — GEPAS / COPAR',
+    periodicidade: 'Eventual',
+    ultimaAtualizacao: '2026-09-17',
+    url: 'https://vitorstefaisk.github.io/Painel_Prospeccao_Operadoras/',
+    destaque: false,
+  },
 ]
