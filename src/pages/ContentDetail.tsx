@@ -1,4 +1,5 @@
 import { ArrowLeft, ArrowUpRight, Bookmark, Building2, CalendarDays, Database, RefreshCw } from 'lucide-react'
+import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { Badge } from '../components/Badge'
 import { ContentCard } from '../components/ContentCard'
@@ -8,11 +9,38 @@ import { useFavorites } from '../hooks/useFavorites'
 import { formatDate, getRelatedItems } from '../utils/catalog'
 import { NotFound } from './NotFound'
 
+function downloadInternetShortcut(url: string, filename: string) {
+  const content = `[InternetShortcut]\r\nURL=${url}\r\n`
+  const blob = new Blob([content], { type: 'application/octet-stream' })
+  const objectUrl = URL.createObjectURL(blob)
+  const link = document.createElement('a')
+  link.href = objectUrl
+  link.download = filename
+  link.click()
+  setTimeout(() => URL.revokeObjectURL(objectUrl), 1000)
+}
+
 export function ContentDetail() {
   const { id } = useParams()
   const item = catalog.find((content) => content.id === id)
   const { isFavorite, toggleFavorite } = useFavorites()
+  const [localFolderCopied, setLocalFolderCopied] = useState<boolean | null>(null)
+  useEffect(() => {
+    setLocalFolderCopied(null)
+  }, [id])
   if (!item) return <NotFound />
+  const localFolder = item.url.startsWith('file:')
+  const folderUrl = item.url
+  const folderShortcut = `${item.id}.url`
+
+  function openLocalFolder() {
+    downloadInternetShortcut(folderUrl, folderShortcut)
+    setLocalFolderCopied(false)
+    void navigator.clipboard.writeText(folderUrl).then(
+      () => setLocalFolderCopied(true),
+      () => setLocalFolderCopied(false),
+    )
+  }
   const favorite = isFavorite(item.id)
   const related = getRelatedItems(item)
   const actionLabel =
@@ -43,9 +71,23 @@ export function ContentDetail() {
             </div>
             <div className="flex flex-wrap gap-3">
               <button onClick={() => toggleFavorite(item.id)} aria-pressed={favorite} className={`inline-flex min-h-11 items-center gap-2 rounded-xl border px-4 py-2.5 text-sm font-semibold transition ${favorite ? 'border-lime bg-lime text-ink' : 'border-sand bg-white text-slate-700 hover:border-lime'}`}><Bookmark size={17} fill={favorite ? 'currentColor' : 'none'} /> {favorite ? 'Favoritado' : 'Favoritar'}</button>
-              <a href={item.url} target="_blank" rel="noreferrer" className="inline-flex min-h-11 items-center gap-2 rounded-xl bg-lime px-5 py-2.5 text-sm font-semibold text-ink transition hover:bg-light">{actionLabel} <ArrowUpRight size={17} /></a>
+              {localFolder ? (
+                <button type="button" onClick={openLocalFolder} className="inline-flex min-h-11 items-center gap-2 rounded-xl bg-lime px-5 py-2.5 text-sm font-semibold text-ink transition hover:bg-light">{actionLabel} <ArrowUpRight size={17} /></button>
+              ) : (
+                <a href={item.url} target="_blank" rel="noreferrer" className="inline-flex min-h-11 items-center gap-2 rounded-xl bg-lime px-5 py-2.5 text-sm font-semibold text-ink transition hover:bg-light">{actionLabel} <ArrowUpRight size={17} /></a>
+              )}
             </div>
           </div>
+          {localFolder && (
+            <p className="mt-4 max-w-3xl text-sm leading-6 text-sand">
+              {localFolderCopied === true
+                ? 'Atalho baixado e endereço copiado. Abra o arquivo .url na barra de downloads para entrar na pasta, ou cole o endereço na barra do navegador.'
+                : localFolderCopied === false
+                  ? 'Atalho baixado. Abra o arquivo .url na barra de downloads para entrar na pasta, ou copie o endereço abaixo e cole na barra do navegador.'
+                  : 'Abra o atalho .url baixado pelo botão para entrar na pasta. Ou copie o endereço abaixo e cole na barra do navegador.'}
+              <span className="mt-2 block break-all font-mono text-lime">{folderUrl}</span>
+            </p>
+          )}
         </div>
       </div>
 

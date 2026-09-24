@@ -687,7 +687,7 @@ export const catalog: CatalogItem[] = [
   },
   {
     id: 'diretorio-direp-gepin',
-    titulo: 'Diretório & Repositório — DIREP / GEPIN',
+    titulo: 'Diretório Sharepoint — DIREP / GEPIN',
     tipo: 'Repositório',
     area: 'GEPIN',
     descricao: 'Diretório e repositório de documentos da GEPIN no SharePoint corporativo da DIREP.',
@@ -703,6 +703,26 @@ export const catalog: CatalogItem[] = [
     periodicidade: 'Eventual',
     ultimaAtualizacao: '2026-09-09',
     url: 'https://ipasgosaude.sharepoint.com/:f:/s/DiretoriadeRelacionamentoeProduto-DIREP/IgBwqEZlUN--QJBmRl7rnR9hAXZ4ove0GQh2P5GjfUVbTsY?e=chdCUD',
+    destaque: false,
+  },
+  {
+    id: 'diretorio-local-gepin',
+    titulo: 'Diretório Local — DIREP / GEPIN',
+    tipo: 'Repositório',
+    area: 'GEPIN',
+    descricao: 'Pasta local da Gerência de Planos e Convênios no servidor Vaticano.',
+    descricaoCompleta:
+      'Diretório local de documentos, materiais e referências da gerência, acessível na rede interna pelo servidor Vaticano, na pasta Gerência de Planos e Convênios.',
+    indicadores: [],
+    tags: ['DIREP', 'GEPIN', 'pasta local', 'documentos', 'repositório', 'Vaticano'],
+    perguntas: [
+      'Onde está a pasta local da gerência?',
+      'Como acessar os documentos da Gerência de Planos e Convênios na rede?',
+    ],
+    fonte: 'Servidor Vaticano',
+    periodicidade: 'Eventual',
+    ultimaAtualizacao: '2026-09-24',
+    url: 'file://vaticano/secoes/Gerencia%20de%20Planos%20e%20Convenios/',
     destaque: false,
   },
   {
