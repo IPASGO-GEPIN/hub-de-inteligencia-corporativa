@@ -824,4 +824,24 @@ export const catalog: CatalogItem[] = [
     url: 'https://vitorstefaisk.github.io/Painel_Prospeccao_Patrocinadores/',
     destaque: false,
   },
+  {
+    id: 'paineis-indicadores-painel-tv',
+    titulo: 'Painéis de Indicadores (Painel TV)',
+    tipo: 'Dashboard',
+    area: 'GEPIN',
+    descricao: "Visual dos painéis de População, Sinistros e NIP's",
+    descricaoCompleta:
+      "Apresentação em formato de slides para exibição em TVs, reunindo a visualização dos painéis de População, Sinistros e NIP's em sequência contínua.",
+    indicadores: ['População', 'Sinistros', "NIP's"],
+    tags: ['Painel TV', 'Slide TV', 'população', 'sinistros', 'NIP', 'GEPIN'],
+    perguntas: [
+      'Onde visualizar os painéis de População, Sinistros e NIP em formato TV?',
+      'Como acessar a apresentação contínua dos indicadores para exibição em telas?',
+    ],
+    fonte: 'SharePoint GEPIN — PAINEIS',
+    periodicidade: 'Eventual',
+    ultimaAtualizacao: '2026-09-30',
+    url: 'https://ipasgosaude.sharepoint.com/sites/GEPIN/Documentos%20Compartilhados/PAINEIS/00_Painel_Completo_Todas_TVs.html',
+    destaque: false,
+  },
 ]
